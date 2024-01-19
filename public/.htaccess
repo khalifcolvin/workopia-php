@@ -1,4 +1,7 @@
 RewriteEngine On
+RewriteBase /workopia/public/
+RewriteCond %{THE_REQUEST} \s/workopia/public/index\.php [NC]
+RewriteRule ^ / [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /index.php [NC,L,QSA]
+RewriteRule ^ index.php [L]
